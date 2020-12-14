@@ -134,7 +134,7 @@ void racing_()// This is not used in final presentation
 }
 void racing()
 {
-  if(pattern>180)
+  if(pattern>60)
   {
      pattern=0;
      hue+=50;
@@ -147,22 +147,22 @@ void racing()
       leds[i]=leds[i-1];
     }
   }
-  else if(pattern<=120)
-  {
-    leds[0]=CHSV(hue,255,255);
-    for(int i=NUM_LEDS-1;i>0;i--)
-    {
-      leds[i]=leds[i-1];
-    }
-  }
-  else if(pattern<=180)
-  {
-    leds[0]=CHSV(hue,255,255);
-    for(int i=NUM_LEDS-1;i>0;i--)
-    {
-      leds[i]=leds[i-1];
-    }
-  }
+//  else if(pattern<=120)// change a bit
+//  {
+//    leds[0]=CHSV(hue,255,255);
+//    for(int i=NUM_LEDS-1;i>0;i--)
+//    {
+//      leds[i]=leds[i-1];
+//    }
+//  }
+//  else if(pattern<=180)
+//  {
+//    leds[0]=CHSV(hue,255,255);
+//    for(int i=NUM_LEDS-1;i>0;i--)
+//    {
+//      leds[i]=leds[i-1];
+//    }
+//  }
   delay(20);
   FastLED.show();
   pattern++;
